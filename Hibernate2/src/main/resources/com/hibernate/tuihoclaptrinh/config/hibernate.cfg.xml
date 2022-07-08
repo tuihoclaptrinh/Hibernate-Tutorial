@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">
+            com.microsoft.sqlserver.jdbc.SQLServerDriver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:sqlserver://localhost:1433;databaseName=Hibernate1;
+        </property>
+        <property name="hibernate.connection.username">
+            sa
+        </property>
+        <property name="hibernate.connection.password">
+            anhdn123
+        </property>
+        
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.SQLServerDialect
+        </property>
+        
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!-- Show all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- List mapping annotation classes -->
+        <mapping class="com.lern.tuihoclaptrinh.Models.Student" />
+<!--        <mapping class="com.tuananh.ecommerce.entity.Category" />
+        <mapping class="com.tuananh.ecommerce.entity.Product" />-->
+
+    </session-factory>
+</hibernate-configuration>
